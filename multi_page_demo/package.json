@@ -1,0 +1,16 @@
+{
+  "name": "multi_page_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^7.1.1",
+    "html-webpack-plugin": "^2.24.1",
+    "webpack": "^2.1.0-beta.25"
+  }
+}

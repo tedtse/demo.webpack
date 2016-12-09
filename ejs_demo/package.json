@@ -1,0 +1,20 @@
+{
+  "name": "ejs_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ejs-compiled-loader": "^1.1.0",
+    "html-webpack-plugin": "^2.24.1",
+    "webpack": "^2.1.0-beta.25"
+  },
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "ejs-render-loader": "^1.0.0"
+  }
+}
