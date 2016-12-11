@@ -44,7 +44,6 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// require('style-loader!css-loader!../css/style.css');
 	__webpack_require__(1);
 
 /***/ },
@@ -82,7 +81,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\r\n    margin: 0;\r\n    background-color: #333;\r\n    color: #ddd;\r\n    font-size: 16px;\r\n    font-family: Microsoft YaHei;\r\n}\r\n.wrap {\r\n    width: 1080px;\r\n    margin: 0 auto;\r\n}\r\nh1 {\r\n    text-align: center;\r\n    font-weight: normal;\r\n}\r\n\r\ndt {\r\n    font-size: 18px; \r\n}\r\ndd {\r\n    margin: 0;\r\n    text-indent: 2em;\r\n    line-height: 2em;\r\n}\r\npre {\r\n    border: 1px solid #999;\r\n    border-radius: 8px;\r\n    margin: 1em 2em;\r\n    color: #00ddaa;\r\n    padding: .5em 0;\r\n}\r\ncode a {\r\n    color: #cb3837; \r\n    text-decoration: none;\r\n}\r\ncode a:hover {\r\n    text-decoration: underline;\r\n}", ""]);
+	exports.push([module.id, "body {\r\n    margin: 0;\r\n    background-color: #333;\r\n    color: #ddd;\r\n    font-size: 20px;\r\n    font-family: Microsoft YaHei;\r\n}\r\na {\r\n    color: #cb3837; \r\n    text-decoration: none;\r\n}\r\na:hover {\r\n    text-decoration: underline;\r\n}\r\n.wrap {\r\n    width: 1080px;\r\n    margin: 0 auto;\r\n}\r\nh1 {\r\n    text-align: center;\r\n    font-weight: normal;\r\n    font-size: 36px;\r\n}\r\n\r\ndt {\r\n    font-size: 22px; \r\n}\r\ndd {\r\n    margin: 0;\r\n    text-indent: 2em;\r\n    line-height: 2em;\r\n}\r\npre {\r\n    border: 1px solid #999;\r\n    border-radius: 8px;\r\n    margin: 1em 2em;\r\n    color: #00ddaa;\r\n    padding: .5em 1em;\r\n    white-space: pre-wrap;\r\n}\r\npre b {\r\n    padding: .25em .5em;\r\n    background-color: #444444;\r\n    border-radius: 5px;\r\n    font-weight: normal;\r\n    color: #00BCD4;\r\n}", ""]);
 
 	// exports
 

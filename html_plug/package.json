@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "base": "webpack --config build/webpack.conf.base.js"
+    "base": "webpack --config build/webpack.conf.base.js",
+    "glob": "webpack --config build/webpack.conf.glob.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "glob": "^7.1.1",
     "html-webpack-plugin": "^2.24.1",
     "webpack": "^1.14.0"
   }

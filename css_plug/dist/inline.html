@@ -17,29 +17,10 @@
         </section>
         <section>
             <dl>
-                <dt>配置文件</dt>
-                <dd>
-                    <pre>
-module.exports = {
-        ...
-        module: {
-            loaders: [
-                {
-                    test: /\.css$/,
-                    loader: 'style-loader!css-loader'
-                }
-            ]
-        }
-    }</pre>
-                </dd>
-            </dl>
-        </section>
-        <section>
-            <dl>
                 <dt>js入口文件引入css</dt>
                 <dd>
                     <pre>
-require('../css/style.css');
+require('style-loader!css-loader!../css/style.css');
     // 加载器从右向左进行转换</pre>
                 </dd>
             </dl>

@@ -7,13 +7,5 @@ module.exports = {
     output: {
         path: './dist',
         filename: 'static/js/[name].js'
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader'
-            }
-        ]
     }
 }

@@ -46,26 +46,23 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
                 <dt>js入口文件引入css</dt>
                 <dd>
                     <pre>
-require('../css/style.css');
-    // 加载器从右向左进行转换</pre>
+require('../css/style.css');</pre>
                 </dd>
             </dl>
         </section>
         <section>
             <dl>
                 <dt>Config</dt>
-                <dd><b>options.filename:</b> string (required) the filename of the result file. May contain [name], [id] and [contenthash]</dd>
-                    <dl>
-                        <dt>[name]</dt>
-                        <dd>the name of the chunk</dd>
-                        <dt>[id]</dt>
-                        <dd>the number of the chunk</dd>
-                        <dt>[contenthash]</dt>
-                        <dd>a hash of the content of the extracted file</dd>
-                    </dl>
-                <dd><b>options.allChunks:</b> boolean extract from all additional chunks too (by default it extracts only from the initial chunk(s))</dd>
-                <dd><b>options.disable:</b> boolean disables the plugin</dd>
-                <dd><b>options.id:</b> string Unique ident for this plugin instance. (For advanced usage only, by default automatically generated)</dd>
+                <dd>
+                    <pre>
+<b>options.filename:</b> string (required) the filename of the result file. May contain [name], [id] and [contenthash]
+        <b>[name]</b> the name of the chunk
+        <b>[id]</b> the number of the chunk
+        <b>[contenthash]</b> a hash of the content of the extracted file
+    <b>options.allChunks:</b> boolean extract from all additional chunks too (by default it extracts only from the initial chunk(s))
+    <b>options.disable:</b> boolean disables the plugin
+    <b>options.id:</b> string Unique ident for this plugin instance. (For advanced usage only, by default automatically generated)</pre>
+                </dd>
             </dl>
         </section>
     </div>
