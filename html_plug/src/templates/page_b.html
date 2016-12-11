@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+    body {margin: 0; background-color: #333; color: #ddd;}
+</style>
+</head>
+<body>
+    <h1>This is Page B</h1>
+    <dl>
+        <dt>html-webpack-plugin config</dt>
+        <dd><b>title:</b> 用来生成页面的 title 元素</dd>
+        <dd><b>filename:</b> 输出的 HTML 文件名，默认是 index.html, 也可以直接配置带有子目录。</dd>
+        <dd><b>template:</b> 模板文件路径，支持加载器，比如 html!./index.html</dd>
+        <dd><b>inject:</b> true | 'head' | 'body' | false  ,注入所有的资源到特定的 template 或者 templateContent 中，如果设置为 true 或者 body，所有的 javascript 资源将被放置到 body 元素的底部，'head' 将放置到 head 元素中。</dd>
+        <dd><b>favicon:</b> 添加特定的 favicon 路径到输出的 HTML 文件中。</dd>
+        <dd><b>minify:</b> {} | false , 传递 html-minifier 选项给 minify 输出</dd>
+        <dd><b>hash:</b> true | false, 如果为 true, 将添加一个唯一的 webpack 编译 hash 到所有包含的脚本和 CSS 文件，对于解除 cache 很有用。</dd>
+        <dd><b>cache:</b> true | false，如果为 true, 这是默认值，仅仅在文件修改之后才会发布文件。</dd>
+        <dd><b>showErrors:</b> true | false, 如果为 true, 这是默认值，错误信息会写入到 HTML 页面中</dd>
+        <dd><b>chunks:</b> 允许只添加某些块 (比如，仅仅 unit test 块)</dd>
+        <dd><b>chunksSortMode:</b> 允许控制块在添加到页面之前的排序方式，支持的值：'none' | 'default' | {function}-default:'auto'</dd>
+        <dd><b>excludeChunks:</b> 允许跳过某些块，(比如，跳过单元测试的块) </dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: #333;
+    color: #ddd;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+}
+.wrap {
+    width: 1080px;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    font-weight: normal;
+}
+
+dt {
+    font-size: 18px; 
+}
+dd {
+    margin: 0;
+    text-indent: 2em;
+    line-height: 2em;
+}
+pre {
+    border: 1px solid #999;
+    border-radius: 8px;
+    margin: 1em 2em;
+    color: #00ddaa;
+    padding: .5em 0;
+}
+code a {
+    color: #cb3837; 
+    text-decoration: none;
+}
+code a:hover {
+    text-decoration: underline;
+}

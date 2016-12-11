@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+    body {margin: 0; background-color: #333; color: #ddd;}
+</style>
+<script type="text/javascript" src="static/js/page_a.js"></script></head>
+<body>
+    <h1>This is Page A</h1>
+    <dl>
+        <dt>html-webpack-plugin config</dt>
+        <dd><b>title:</b> The title to use for the generated HTML document.</dd>
+        <dd><b>filename:</b> The file to write the HTML to. Defaults to index.html. You can specify a subdirectory here too (eg: assets/admin.html).</dd>
+        <dd><b>template:</b> Webpack require path to the template. Please see the docs for details.</dd>
+        <dd><b>inject:</b> true | 'head' | 'body' | false Inject all assets into the given template or templateContent - When passing true or 'body' all javascript resources will be placed at the bottom of the body element. 'head' will place the scripts in the head element.</dd>
+        <dd><b>favicon:</b> Adds the given favicon path to the output html.</dd>
+        <dd><b>minify:</b> {...} | false Pass a html-minifier options object to minify the output.</dd>
+        <dd><b>hash:</b> true | false if true then append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.</dd>
+        <dd><b>cache:</b> true | false if true (default) try to emit the file only if it was changed.</dd>
+        <dd><b>showErrors:</b> true | false if true (default) errors details will be written into the html page.</dd>
+        <dd><b>chunks:</b> Allows you to add only some chunks (e.g. only the unit-test chunk)</dd>
+        <dd><b>chunksSortMode:</b> Allows to control how chunks should be sorted before they are included to the html. Allowed values: 'none' | 'auto' | 'dependency' | {function} - default: 'auto'</dd>
+        <dd><b>excludeChunks:</b> Allows you to skip some chunks (e.g. don't add the unit-test chunk)</dd>
+        <dd><b>xhtml:</b> true | false If true render the link tags as self-closing, XHTML compliant. Default is false</dd>
+    </dl>
+</body>
+</html>
