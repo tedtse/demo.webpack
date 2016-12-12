@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<link rel="stylesheet" href="./static/css/style.css" />
 </head>
 <body>
     <div class="wrap">
@@ -21,16 +22,21 @@
                 <dt>配置文件</dt>
                 <dd>
                     <pre>
-module.exports = {
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+    ...
+    module.exports = {
         ...
         module: {
             loaders: [
                 {
-                    test: '/\.css$/',
-                    loader: 'style-loader!css-loader'
+                    test: /\.css$/,
+                    loader: ExtractTextPlugin.extract('style', 'css')
                 }
             ]
-        }
+        },
+        plugins: [
+            new ExtractTextPlugin('static/css/style.css')
+        ]
     }</pre>
                 </dd>
             </dl>
@@ -40,27 +46,28 @@ module.exports = {
                 <dt>js入口文件引入css</dt>
                 <dd>
                     <pre>
-require('style-loader!css-loader!../css/style.css');
+require('../css/style.css');
     // 加载器从右向左进行转换</pre>
                 </dd>
             </dl>
         </section>
-        
-        <dl>
-            <dt>html-webpack-plugin config</dt>
-            <dd><b>options.filename:</b> string (required) the filename of the result file. May contain [name], [id] and [contenthash]</dd>
-                <dl>
-                    <dt>[name]</dt>
-                    <dd>the name of the chunk</dd>
-                    <dt>[id]</dt>
-                    <dd>the number of the chunk</dd>
-                    <dt>[contenthash]</dt>
-                    <dd>a hash of the content of the extracted file</dd>
-                </dl>
-            <dd><b>options.allChunks:</b> boolean extract from all additional chunks too (by default it extracts only from the initial chunk(s))</dd>
-            <dd><b>options.disable:</b> boolean disables the plugin</dd>
-            <dd><b>options.id:</b> string Unique ident for this plugin instance. (For advanced usage only, by default automatically generated)</dd>
-        </dl>
+        <section>
+            <dl>
+                <dt>Config</dt>
+                <dd><b>options.filename:</b> string (required) the filename of the result file. May contain [name], [id] and [contenthash]</dd>
+                    <dl>
+                        <dt>[name]</dt>
+                        <dd>the name of the chunk</dd>
+                        <dt>[id]</dt>
+                        <dd>the number of the chunk</dd>
+                        <dt>[contenthash]</dt>
+                        <dd>a hash of the content of the extracted file</dd>
+                    </dl>
+                <dd><b>options.allChunks:</b> boolean extract from all additional chunks too (by default it extracts only from the initial chunk(s))</dd>
+                <dd><b>options.disable:</b> boolean disables the plugin</dd>
+                <dd><b>options.id:</b> string Unique ident for this plugin instance. (For advanced usage only, by default automatically generated)</dd>
+            </dl>
+        </section>
     </div>
 <script type="text/javascript" src="static/js/extract-text-webpack-plugin.js"></script></body>
 </html>

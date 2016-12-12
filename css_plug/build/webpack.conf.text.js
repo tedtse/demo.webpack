@@ -1,5 +1,4 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin'); 
 
 module.exports = {
     entry: {
@@ -12,18 +11,12 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: '/\.css$/',
-                // loader: ExtractTextPlugin.extract('style', 'css')
-                loader: ExtractTextPlugin.extract('loader', 'css')
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style', 'css')
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin('static/css/style.css'),
-        new HtmlWebpackPlugin({
-            filename: 'extract-text-webpack-plugin.html',
-            template: './src/templates/extract-text-webpack-plugin.html',
-            chunks: ['extract-text-webpack-plugin']
-        })
+        new ExtractTextPlugin('static/css/style.css')
     ]
 }
