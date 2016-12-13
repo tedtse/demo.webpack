@@ -2,15 +2,19 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<link rel="stylesheet" href="./static/css/style.css" />
 </head>
 <body>
     <div class="wrap">
-        <h1>内嵌 CSS</h1>
+        <h1>File Loader</h1>
+        <section>
+            <ul class="image-list"></ul>
+        </section>
         <section>
             <dl>
                 <dt>依赖</dt>
                 <dd>
-                    <pre>npm install webpack <a href="https://github.com/webpack/style-loader" target="_blank">style-loader</a> <a href="https://github.com/webpack/css-loader" target="_blank">css-loader</a> --save-dev</pre>
+                    <pre>npm install webpack <a href="https://github.com/webpack/file-loader" target="_blank">file-loader</a> --save-dev</pre>
                 </dd>
             </dl>
         </section>
@@ -25,6 +29,6 @@ require('style-loader!css-loader!../css/style.css');
             </dl>
         </section>
     </div>
-<script src="./static/js/inline.js"></script>
+<script src="./static/js/file1.js"></script>
 </body>
 </html>

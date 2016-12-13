@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="./static/css/style.css" />
+</head>
+<body>
+    <div class="wrap">
+        <h1>File Loader</h1>
+        <section>
+            <ul class="image-list">
+                <li><img src="static/images/549c5f7e8f6d8b77ace9002f235aa434.png" /></li>
+                <li><img src="static/images/3bbbf0f95213c9f2af4dbb6cbc3188e0.png" /></li>
+                <li><img src="static/images/c9e9cdbb1ee18ff02250209f05e183ca.png" /></li>
+                <li><img src="static/images/aa97ada109968fa21ea341f186f9bc72.png" /></li>
+            </ul>
+        </section>
+        <section>
+            <dl>
+                <dt>依赖</dt>
+                <dd>
+                    <pre>npm install webpack <a href="https://github.com/webpack/file-loader" target="_blank">file-loader</a> --save-dev</pre>
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <dl>
+                <dt>js入口文件引入css</dt>
+                <dd>
+                    <pre>
+require('style-loader!css-loader!../css/style.css');
+    // 加载器从右向左进行转换</pre>
+                </dd>
+            </dl>
+        </section>
+    </div>
+<script type="text/javascript" src="static/js/file2.js"></script></body>
+</html>
