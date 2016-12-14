@@ -1,1 +1,0 @@
-document.body.innerHTML += 'reference page_b.js';

@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="wrap">
-        <h1>File Loader</h1>
+        <h1>Url Loader</h1>
         <section>
             <ul class="image-list">
                 <li><img src="../assets/images/logo_123.png" /></li>
@@ -19,7 +19,7 @@
             <dl>
                 <dt>依赖</dt>
                 <dd>
-                    <pre>npm install webpack <a href="https://github.com/webpack/file-loader" target="_blank">file-loader</a> <a href="https://github.com/webpack/html-loader" target="_blank">html-loader</a> --save-dev</pre>
+                    <pre>npm install webpack <a href="https://github.com/webpack/url-loader" target="_blank">url-loader</a> <a href="https://github.com/webpack/html-loader" target="_blank">html-loader</a> --save-dev</pre>
                 </dd>
             </dl>
         </section>
@@ -41,7 +41,11 @@ module: {
         loaders: [
             {
                 test: /\.(png|jpg)$/,
-                loader: 'file-loader?name=static/images/[hash].[ext]'
+                loader: 'url-loader',
+                query: {
+                    name: 'static/images/[hash].[ext]',
+                    limit: 2048
+                }
             },
             {
                 test: /\.html$/,

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "file1": "webpack --config build/webpack.conf.file1.js",
-    "file2": "webpack --config build/webpack.conf.file2.js"
+    "file2": "webpack --config build/webpack.conf.file2.js",
+    "url": "webpack --config build/webpack.conf.url.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.24.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.14.0"
   }
 }

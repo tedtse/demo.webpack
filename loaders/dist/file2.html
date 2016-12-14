@@ -19,17 +19,36 @@
             <dl>
                 <dt>依赖</dt>
                 <dd>
-                    <pre>npm install webpack <a href="https://github.com/webpack/file-loader" target="_blank">file-loader</a> --save-dev</pre>
+                    <pre>npm install webpack <a href="https://github.com/webpack/file-loader" target="_blank">file-loader</a> <a href="https://github.com/webpack/html-loader" target="_blank">html-loader</a> --save-dev</pre>
                 </dd>
             </dl>
         </section>
         <section>
             <dl>
-                <dt>js入口文件引入css</dt>
+                <dt>html模板引入图片</dt>
                 <dd>
                     <pre>
-require('style-loader!css-loader!../css/style.css');
-    // 加载器从右向左进行转换</pre>
+&lt;img src="../assets/images/logo_123.png" /&gt;</pre>
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <dl>
+                <dt>配置文件</dt>
+                <dd>
+                    <pre>
+module: {
+        loaders: [
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'file-loader?name=static/images/[hash].[ext]'
+            },
+            {
+                test: /\.html$/,
+                loader: 'html'
+            }
+        ]
+    }</pre>
                 </dd>
             </dl>
         </section>
