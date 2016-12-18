@@ -1,22 +1,23 @@
 {
-  "name": "loaders",
+  "name": "template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "file1": "webpack --config build/webpack.conf.file1.js",
-    "file2": "webpack --config build/webpack.conf.file2.js",
-    "url": "webpack --config build/webpack.conf.url.js",
-    "media": "webpack --config build/webpack.conf.media.js"
+    "ejs": "webpack --config build/webpack.conf.ejs.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.26.1",
+    "ejs-compiled-loader": "^1.1.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "glob": "^7.1.1",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.24.1",
-    "url-loader": "^0.5.7",
+    "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
   }
 }

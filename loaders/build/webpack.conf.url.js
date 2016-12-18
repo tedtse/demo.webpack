@@ -21,6 +21,7 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html'
+                // loader: 'html?attrs[]=img:src&attrs[]=img:data-src'
             }
         ]
     },
