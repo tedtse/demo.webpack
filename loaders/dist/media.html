@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="./static/css/style.css" />
+</head>
+<body>
+    <div class="wrap">
+        <h1>Media Loader</h1>
+        <section>
+            <dl class="media-list">
+                <li>
+                    <video width="600" height="420" controls="controls">
+                        <source src="static/media/bc9f626c7281ae6563b28a77e0d5fb10.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+                <li>
+                    <video width="320" height="240" controls="controls">
+                        <source src="static/media/62a4fde860f3d9aa9d3f05d0b14ef554.ogg" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+                <li>
+                    <audio src="static/media/3a370dcee6e1d7b70981114bb146180e.ogg" controls="controls"></audio>
+                </li>
+            </dl>
+        </section>
+        <section>
+            <dl>
+                <dt>依赖</dt>
+                <dd>
+                    <pre>npm install webpack <a href="https://github.com/webpack/url-loader" target="_blank">url-loader</a> <a href="https://github.com/webpack/html-loader" target="_blank">html-loader</a> --save-dev</pre>
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <dl>
+                <dt>html模板引入图片</dt>
+                <dd>
+                    <pre>
+&lt;video width="600" height="420" controls="controls"&gt;
+        &lt;source src="../assets/media/worm.mp4" type="video/mp4"&gt;
+        Your browser does not support the video tag.
+    &lt;/video&gt;</pre>
+                    <pre>
+&lt;audio src="../assets/media/horse.ogg" controls="controls"&gt;&lt;/audio&gt;</pre>
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <dl>
+                <dt>配置文件</dt>
+                <dd>
+                    <pre>
+module: {
+        loaders: [
+            {
+                test: /\.(mp4|ogg)$/,
+                loader: 'file-loader',
+                query: {
+                    name: 'static/media/[hash].[ext]'
+                }
+            },
+            {
+                test: /\.html$/,
+                // loader: 'html?attrs[]=img:src&attrs[]=source:src&attrs[]=audio:src',
+                loader: 'html',
+                query: {
+                    attrs: ['img:src', 'source:src', 'audio:src']
+                }
+            }
+        ]
+    }</pre>
+                </dd>
+            </dl>
+        </section>
+    </div>
+<script type="text/javascript" src="static/js/media.js"></script></body>
+</html>

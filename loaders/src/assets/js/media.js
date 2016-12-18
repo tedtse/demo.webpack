@@ -1,0 +1,1 @@
+// require('file-loader?name=static/media/[hash].[ext]!../media/movie.ogg')
