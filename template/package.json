@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ejs": "webpack --config build/webpack.conf.ejs.js"
+    "ejs": "webpack --config build/webpack.conf.ejs.js",
+    "underscore": "webpack --config build/webpack.conf.underscore.js",
+    "artTemplate": "webpack --config build/webpack.conf.artTemplate.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +19,11 @@
     "glob": "^7.1.1",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.24.1",
+    "string-loader": "0.0.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
   }
 }

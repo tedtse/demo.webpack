@@ -1,21 +1,18 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var glob = require('glob');
-var path = require('path');
 
-var pages = getEntry('./src/ejs/*.ejs');
-
-function getEntry (globPath) {
-    var entries = {}, basename;
-    glob.sync(globPath).forEach(function (entry) {
-    basename = path.basename(entry, path.extname(entry))
-        entries[basename] = entry
-    })
-    return entries;
+var pages = {
+    home: './src/ejs/ejs_home.ejs',
+    info: './src/ejs/ejs_info.ejs',
+    data: './src/ejs/ejs_data.ejs'
 };
 
 module.exports = {
-    entry: getEntry('./src/assets/js/*.js'),
+    entry: {
+        home: './src/assets/js/ejs_home.js',
+        info: './src/assets/js/ejs_info.js',
+        data: './src/assets/js/ejs_data.js'
+    },
     output: {
         path: './dist',
         filename: 'static/js/[name].js'
@@ -29,8 +26,18 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract('style', 'css')
+            },
+            {
+                test: /\.tpl$/,
+                loader: 'string'
             }
-        ]
+        ],
+        noParse: [/ejs.min.js/]
+    },
+    resolve: {
+        alias: {
+            'ejs': './lib/ejs.min.js'
+        }
     },
     plugins: [
         new ExtractTextPlugin('static/css/style.css')
