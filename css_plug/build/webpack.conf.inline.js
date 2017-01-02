@@ -1,6 +1,6 @@
 module.exports = {
     entry: {
-        'inline': './src/assets/js/file.js'
+        'inline': './src/assets/js/inline.js'
     },
     output: {
         path: './dist',

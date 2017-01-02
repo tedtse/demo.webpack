@@ -1,0 +1,8 @@
+@import 'reset';
+
+.flex {
+    display: flex;
+}
+.flex > div {
+    flex: 1 1 auto;
+}
