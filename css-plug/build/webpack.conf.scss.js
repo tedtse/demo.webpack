@@ -10,8 +10,8 @@ module.exports = {
         loaders: [
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'autoprefixer-loader', 'sass-loader']
-                // loaders: 'style-loader!css-loader!sass-loader'
+                // loaders: ['style-loader', 'css-loader', 'autoprefixer-loader', 'sass-loader']
+                loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
             }
         ]
     }

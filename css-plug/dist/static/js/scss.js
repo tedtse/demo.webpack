@@ -82,7 +82,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  margin: 0; }\n\nul, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\n.flex {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n\n.flex > div {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 auto;\n          flex: 1 1 auto; }\n", ""]);
+	exports.push([module.id, "body {\n  margin: 0; }\n\na {\n  text-decoration: none; }\n\na:hover {\n  text-decoration: underline; }\n\nul, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\nbody {\n  background-color: #333;\n  color: #ddd;\n  font-size: 20px;\n  font-family: Microsoft YaHei; }\n\na {\n  color: #cb3837; }\n\n.wrap {\n  width: 1080px;\n  margin: 0 auto; }\n\n.flex {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n\n.flex > div {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 auto;\n          flex: 1 1 auto; }\n\nh1 {\n  text-align: center;\n  font-weight: normal;\n  font-size: 36px; }\n\ndt {\n  font-size: 22px; }\n\ndd {\n  margin: 0;\n  text-indent: 2em;\n  line-height: 2em; }\n\npre {\n  border: 1px solid #999;\n  border-radius: 8px;\n  margin: 1em 2em;\n  color: #00ddaa;\n  padding: .5em 1em;\n  white-space: pre-wrap; }\n\npre b {\n  padding: .25em .5em;\n  background-color: #444444;\n  border-radius: 5px;\n  font-weight: normal;\n  color: #00BCD4; }\n", ""]);
 
 	// exports
 
