@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "inline": "webpack --config ./build/webpack.conf.inline.js",
-    "text": "webpack --config ./build/webpack.conf.text.js"
+    "text": "webpack --config ./build/webpack.conf.text.js",
+    "scss": "webpack --config ./build/webpack.conf.scss.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^4.1.1",
+    "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
   }
