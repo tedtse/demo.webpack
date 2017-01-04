@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="./static/css/style.css" />
+<script type="text/javascript" src="static/js/page-a.js"></script></head>
+<body>
+    <div class="wrap">
+        <h1>This is Page A</h1>
+        <section>
+            <dl>
+                <dt>安装</dt>
+                <dd>
+                    <pre>npm install webpack <a href="https://github.com/webpack/webpack" target="_blank">html-webpack-plugin</a> --save-dev</pre>
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <dl>
+                <dt>配置文件</dt>
+                <dd>
+                    <pre>
+plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'page-a.html',
+            template: './src/templates/page-a.html',
+            inject: 'head',              // js插入位置,
+            chunks: ['page-a']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'page-b.html',
+            template: './src/templates/page-b.html',
+            chunks: ['page-b']
+        })
+    ]</pre>
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <dl>
+                <dt>html-webpack-plugin 参数</dt>
+                <dd>
+                  <pre>
+<b>title:</b> The title to use for the generated HTML document.
+    <b>filename:</b> The file to write the HTML to. Defaults to index.html. You can specify a subdirectory here too (eg: assets/admin.html).
+    <b>template:</b> Webpack require path to the template. Please see the docs for details.
+    <b>inject:</b> true | 'head' | 'body' | false Inject all assets into the given template or templateContent - When passing true or 'body' all javascript resources will be placed at the bottom of the body element. 'head' will place the scripts in the head element.
+    <b>favicon:</b> Adds the given favicon path to the output html.
+    <b>minify:</b> {...} | false Pass a html-minifier options object to minify the output.
+    <b>hash:</b> true | false if true then append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.
+    <b>cache:</b> true | false if true (default) try to emit the file only if it was changed.
+    <b>showErrors:</b> true | false if true (default) errors details will be written into the html page.
+    <b>chunks:</b> Allows you to add only some chunks (e.g. only the unit-test chunk)
+    <b>chunksSortMode:</b> Allows to control how chunks should be sorted before they are included to the html. Allowed values: 'none' | 'auto' | 'dependency' | {function} - default: 'auto'
+    <b>excludeChunks:</b> Allows you to skip some chunks (e.g. don't add the unit-test chunk)
+    <b>xhtml:</b> true | false If true render the link tags as self-closing, XHTML compliant. Default is false</pre>
+            </dl>
+        </section>
+    </div>
+</body>
+</html>
