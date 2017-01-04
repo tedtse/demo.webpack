@@ -78,25 +78,3 @@ pre b {
 .media-list li:nth-of-type(1) {
     border-top: 1px solid #999;
 }
-nav {
-    display: flex;
-}
-nav a {
-    flex: 1 1 auto;
-    text-align: center;
-    line-height: 60px;
-    box-sizing: border-box;
-    font-size: 24px;
-}
-nav a:hover {
-    text-decoration: none;
-}
-nav a.cur {
-    border-width: 0 4px 4px 1px;
-    border-color: #118833;
-    border-style: solid;
-    color: #ddd; 
-}
-nav a.cur:nth-child(1) {
-    border-width: 0 1px 4px 4px;
-}

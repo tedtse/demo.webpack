@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link href="static/css/style.css" rel="stylesheet"></head>
+<body>
+    <div class="wrap">
+        
+        <nav>
+    
+        <a href="ejs-home.html">Home</a>
+    
+    
+        <a href="ejs-info.html">Info</a>
+    
+    
+        <a class="cur" href="javascript:;">Data</a>
+    
+</nav>
+        <article class="">
+            <h1>DATA</h1>
+            <p>This is tha page of Data Template</p>
+            <ul></ul>
+        </article>
+        <section>
+            <dl>
+                <dt>安装</dt>
+                <dd>
+                    <pre>npm install webpack <a href="https://github.com/bazilio91/ejs-compiled-loader" target="_blank">ejs-compiled-loader</a> string-loader --save-dev</pre>
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <dl>
+                <dt>配置文件</dt>
+                <dd>
+                    <pre>
+...
+    module: {
+        loaders: [
+            {
+                test: /\.ejs$/,
+                loader: 'ejs-compiled-loader'
+            },
+            {
+                test: /\.tpl$/,
+                loader: 'string'
+            }
+        ],
+        noParse: [/ejs.min.js/]
+    },
+    resolve: {
+        alias: {
+            'ejs': './lib/ejs.min.js'
+        }
+    }
+    ...</pre>
+                </dd>
+            </dl>
+        </section>
+    </div>
+<script type="text/javascript" src="static/js/ejs-data.js"></script></body>
+</html>

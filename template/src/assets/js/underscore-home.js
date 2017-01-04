@@ -1,5 +1,5 @@
 require('../css/style.css');
-var tpl = require('../tpl/underscore_data.tpl');
+var tpl = require('../tpl/underscore-data.tpl');
 // var _ = require('underscore');
 
 var data = [

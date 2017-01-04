@@ -97,3 +97,6 @@ nav a.cur {
     border-style: solid;
     color: #ddd; 
 }
+nav a.cur:nth-child(1) {
+    border-width: 0 1px 4px 4px;
+}

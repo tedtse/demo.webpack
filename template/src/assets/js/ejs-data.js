@@ -1,6 +1,6 @@
 require('ejs');
 require('../css/style.css');
-var tpl = require('../tpl/ejs_data.tpl');
+var tpl = require('../tpl/ejs-data.tpl');
 
 // var people = ['geddy', 'neil', 'alex'],
     // html = ejs.render('<%= people.join(", "); %>', {people: people});

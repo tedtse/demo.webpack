@@ -2,16 +2,16 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var pages = {
-    home: './src/ejs/ejs_home.ejs',
-    info: './src/ejs/ejs_info.ejs',
-    data: './src/ejs/ejs_data.ejs'
+    'ejs-home': './src/ejs/ejs-home.ejs',
+    'ejs-info': './src/ejs/ejs-info.ejs',
+    'ejs-data': './src/ejs/ejs-data.ejs'
 };
 
 module.exports = {
     entry: {
-        home: './src/assets/js/ejs_home.js',
-        info: './src/assets/js/ejs_info.js',
-        data: './src/assets/js/ejs_data.js'
+        'ejs-home': './src/assets/js/ejs-home.js',
+        'ejs-info': './src/assets/js/ejs-info.js',
+        'ejs-data': './src/assets/js/ejs-data.js'
     },
     output: {
         path: './dist',

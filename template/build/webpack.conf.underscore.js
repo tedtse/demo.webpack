@@ -4,7 +4,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        home: './src/assets/js/underscore_home.js'
+        'underscore-home': './src/assets/js/underscore-home.js'
     },
     output: {
         path: './dist',
@@ -28,10 +28,10 @@ module.exports = {
             '_': 'underscore'
         }),
         new HtmlWebpackPlugin({
-            filename: 'underscore_home.html',
-            template: './src/underscore/underscore_home.html',
+            filename: 'underscore-home.html',
+            template: './src/underscore/underscore-home.html',
             inject: true,              // js插入位置,
-            chunks: ['home']
+            chunks: ['underscore-home']
         })
     ]
 };

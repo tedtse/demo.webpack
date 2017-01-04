@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        home: './src/assets/js/artTemplate_home.js'
+        'art-template-home': './src/assets/js/art-template-home.js'
     },
     output: {
         path: './dist',
@@ -25,10 +25,10 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin('static/css/style.css'),
         new HtmlWebpackPlugin({
-            filename: 'artTemplate_home.html',
-            template: './src/artTemplate/artTemplate_home.html',
+            filename: 'art-template-home.html',
+            template: './src/art-template/art-template-home.html',
             inject: true,              // js≤Â»ÎŒª÷√,
-            chunks: ['home']
+            chunks: ['art-template-home']
         })
     ],
     resolve: {

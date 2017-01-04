@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="./static/css/style.css" />
+</head>
+<body>
+    <div class="wrap">
+        <article class="">
+            <h1>HOME</h1>
+            <p>This is Page Home</p>
+            <ul></ul>
+        </article>
+        <section>
+            <dl>
+                <dt>安装</dt>
+                <dd>
+                    <pre>npm install babel-loader babel-core babel-preset-es2015 webpack --save-dev</pre>
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <dl>
+                <dt>配置文件</dt>
+                <dd>
+                    <pre>
+...
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /(node_modules|bower_components)/,
+                query: {
+                    presets: ['es2015']
+                }
+            }
+        ]
+    }
+    ...</pre>
+                </dd>
+            </dl>
+        </section>
+    </div>
+<script type="text/javascript" src="static/js/page-b.js"></script></body>
+</html>

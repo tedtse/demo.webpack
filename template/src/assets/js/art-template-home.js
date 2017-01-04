@@ -1,6 +1,6 @@
 require('../css/style.css');
 var template = require('art-template');
-var tpl = require('../tpl/art_template_data.tpl');
+var tpl = require('../tpl/art-template-data.tpl');
 var data = [
     {
         title: 'The Data'
