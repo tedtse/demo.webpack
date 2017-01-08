@@ -20,9 +20,10 @@
                 <dt>配置文件</dt>
                 <dd>
                     <pre>
-var HtmlWebpackPlugin = require('html-webpack-plugin'); 
+var HtmlWebpackPlugin = require('html-webpack-plugin');
     var glob = require('glob');
     var path = require('path');
+    var pages = getEntry('./src/templates/*.html');
     function getEntry (globPath) {
         var entries = {}, basename;
         glob.sync(globPath).forEach(function (entry) {

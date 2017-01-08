@@ -20,7 +20,9 @@
                 <dt>配置文件</dt>
                 <dd>
                     <pre>
-plugins: [
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+    ...
+    plugins: [
         new HtmlWebpackPlugin({
             filename: 'page-a.html',
             template: './src/templates/page-a.html',
