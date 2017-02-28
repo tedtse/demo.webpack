@@ -17,7 +17,8 @@ plugins: [
     })
 ]
 ```
-可以运行 *** npm run base *** 查看Demo
+可以运行 ***npm run base*** 查看Demo
+
 > glob模块
 
 如果要生成多个HTML文件，可以用多个 new HtmlWebpackPlugin，如：
@@ -60,4 +61,4 @@ plugins: [
     module.exports.plugins.push(new HtmlWebpackPlugin(conf));
   }
 ```
-可以运行 ***npm run glob ***查看Demo
+可以运行 ***npm run glob***查看Demo
