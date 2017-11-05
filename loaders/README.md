@@ -2,31 +2,28 @@ loaders 是 webpack 非常重要的一个配置项目，主要管理不同格式
 
 ### JS 直接使用 loader
 
-> 基本用法
-
-#### 安装
+> 安装
 ```
   npm install webpack file-loader --save-dev
 ```
 
-#### JS代码
+> JS代码
 ```
   require('../images/name.jpg')
   require('file-loader?name=static/images/[hash].[ext]!../images/name.jpg')
 ```
 图片文件 (.jpg, .gif, .png) 有 webpack 默认的加载器，可以直接 require。
-但量如果需要给文件加上 hash， 则需要用 file-loader
+但量如果要给文件加上 hash， 则需要用 file-loader
+可以运行 ***npm run file1*** 查看Demo
 
 ### 配置文件处理图片文件
 
-> 基本用法
-
-#### 安装
+> 安装
 ```
   npm install webpack file-loader html-loader --save-dev
 ```
 
-#### 配置文件
+> 配置文件
 ```
   rules: [
     {
@@ -48,17 +45,16 @@ loaders 是 webpack 非常重要的一个配置项目，主要管理不同格式
     }
   ]
 ```
+可以运行 ***npm run file2*** 查看Demo
 
 ### 媒体资源文件
 
-> 基本用法
-
-#### 安装
+> 安装
 ```
   npm install webpack file-loader html-loader --save-dev
 ```
 
-#### 配置文件
+> 配置文件
 ```
   rules: [
     {
@@ -86,18 +82,17 @@ loaders 是 webpack 非常重要的一个配置项目，主要管理不同格式
     }
   ]
 ```
+可以运行 ***npm run media*** 查看Demo
 
 ### url-loader
 url-loader 和 file-loader 非常类似，区别在于 url-loader 有 base64 选项
 
-> 基本用法
-
-#### 安装
+> 安装
 ```
   npm install webpack url-loader html-loader --save-dev
 ```
 
-#### 配置文件
+> 配置文件
 ```
   rules: [
       {
@@ -126,3 +121,4 @@ url-loader 和 file-loader 非常类似，区别在于 url-loader 有 base64 选
       }
     ]
 ```
+可以运行 ***npm run url*** 查看Demo
