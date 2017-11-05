@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<link rel="stylesheet" href="./static/css/style.css" />
+<link rel="stylesheet" href="../../dist/static/style/page.css" />
 </head>
 <body>
     <div class="wrap">
@@ -25,18 +25,20 @@
                 <dd>
                     <pre>
 ...
-    module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /(node_modules|bower_components)/,
-                query: {
-                    presets: ['es2015']
-                }
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015']
             }
+          }
         ]
-    }
+      }
+    ]
     ...</pre>
                 </dd>
             </dl>

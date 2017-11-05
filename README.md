@@ -1,7 +1,7 @@
 本README.md为 Webpack简易Demo 的提纲
 
 ### 初学者用Webpack
-很多初学者中是把 Webpack 当成一个js打包工具。点击这里[fresher](./fresher)
+很多初学者只是把 Webpack 当成一个js打包工具。点击这里[fresher](./fresher)
 
 ### Webpack引入HTML文件
 Webpack以JS为入口文件，输出对应的bundle，如果想要关联HTML文件，可以用[html-webpack-plugin](./html-plug/)插件
