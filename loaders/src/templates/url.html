@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<link rel="stylesheet" href="./static/css/style.css" />
+<link rel="stylesheet" href="../../dist/static/style/page.css" />
 </head>
 <body>
     <div class="wrap">
@@ -37,22 +37,32 @@
                 <dt>配置文件</dt>
                 <dd>
                     <pre>
-module: {
-        loaders: [
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'url-loader',
-                query: {
-                    name: 'static/images/[hash].[ext]',
-                    limit: 2048
-                }
-            },
-            {
-                test: /\.html$/,
-                loader: 'html'
+rules: [
+      {
+        test: /\.(png|jpg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: 'static/images/[hash].[ext]',
+              limit: 2048
             }
+          }
         ]
-    }</pre>
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            // loader: 'html-loader?attrs[]=img:src&attrs[]=img:data-src'
+            loader: 'html-loader',
+            options: {
+              attrs: [ 'img:src', 'img:data-src' ]
+            }
+          }
+        ]
+      }
+    ]</pre>
                 </dd>
             </dl>
         </section>

@@ -11,7 +11,7 @@
             <dl>
                 <dt>安装</dt>
                 <dd>
-                    <pre>npm run install webpack <a href="https://github.com/webpack/style-loader" target="_blank">style-loader</a> <a href="https://github.com/webpack/css-loader" target="_blank">css-loader</a> <a href="https://github.com/webpack/extract-text-webpack-plugin" target="_blank">extract-text-webpack-plugin</a> --save-dev</pre>
+                    <pre>npm run install webpack <a href="https://github.com/webpack/css-loader" target="_blank">css-loader</a> <a href="https://github.com/webpack/extract-text-webpack-plugin" target="_blank">extract-text-webpack-plugin</a> --save-dev</pre>
                 </dd>
             </dl>
         </section>
@@ -23,18 +23,20 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
     ...
     module.exports = {
-        ...
-        module: {
-            loaders: [
-                {
-                    test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style', 'css')
-                }
-            ]
-        },
-        plugins: [
-            new ExtractTextPlugin('static/css/style.css')
+      ...
+      module: {
+        rules: [
+          {
+            test: /\.css$/,
+            use: ExtractTextPlugin.extract({
+              use: ['css-loader']
+            })
+          }
         ]
+      },
+      plugins: [
+        new ExtractTextPlugin('static/css/style.css')
+      ]
     }</pre>
                 </dd>
             </dl>
@@ -54,9 +56,9 @@ require('../css/style.css');</pre>
                 <dd>
                     <pre>
 <b>options.filename:</b> string (required) the filename of the result file. May contain [name], [id] and [contenthash]
-        <b>[name]</b> the name of the chunk
-        <b>[id]</b> the number of the chunk
-        <b>[contenthash]</b> a hash of the content of the extracted file
+    <b>[name]</b> the name of the chunk
+    <b>[id]</b> the number of the chunk
+    <b>[contenthash]</b> a hash of the content of the extracted file
     <b>options.allChunks:</b> boolean extract from all additional chunks too (by default it extracts only from the initial chunk(s))
     <b>options.disable:</b> boolean disables the plugin
     <b>options.id:</b> string Unique ident for this plugin instance. (For advanced usage only, by default automatically generated)</pre>

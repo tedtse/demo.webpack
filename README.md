@@ -1,11 +1,19 @@
-±¾README.mdÎª Webpack¼òÒ×Demo µÄÌá¸Ù
-### WebpackÒıÈëHTMLÎÄ¼ş
-WebpackÒÔJSÎªÈë¿ÚÎÄ¼ş£¬Êä³ö¶ÔÓ¦µÄbundle£¬Èç¹ûÏëÒª¹ØÁªHTMLÎÄ¼ş£¬¿ÉÒÔÓÃ[html-webpack-plugin](./html-plug/)²å¼ş
-### WebpackÒıÈëCSSÎÄ¼ş
-WebpackÍ¨¹ırequrie('...css')ÔÚJs bundle ÖĞÒıÈëCSSÎÄ¼ş£¬µ¼ÖÂCSSÎÄ±¾·ÅÈëJsÎÄ¼şÖĞ¡£ÒªÏë½«CSSÎÄ¼ş³é³öÀ´·ÅÖÁHTMLÖĞ£¬¿ÉÒÔÓÃ[extract-text-webpack-plugin](./css-plug/)²å¼ş
-### WebpackÓëÄ£°å
-±¾DemoÖ÷Òª×÷ÁËWebpackÒıÈëHTML¹¹½¨Ä£°å(ejs)¡¢RuntimeÊ±µÄÊı¾İÄ£°å(ejs¡¢underscore¡¢art-template)µÄ¼òµ¥Ê¾Àı[template](./template)
-### WebpackÖ®loader
-Èç¹û¶ÔWebpackÖĞµÄfile-loader¡¢url-loader¡¢html-loader²»ÁË½âµÄ¿ÉÒÔµã»÷ÕâÀï[loaders](./loaders)
-### WebpackÖ®es6
-ÏëÓÃWebpackµÄÏîÄ¿ÖĞÓÃes6Óï·¨£¬¿ÉÒÔµã»÷ÕâÀï[es6](./es6)
+æœ¬README.mdä¸º Webpackç®€æ˜“Demo çš„æçº²
+
+### åˆå­¦è€…ç”¨Webpack
+åˆå­¦è€…ç”¨webpackå¯èƒ½åªæ˜¯ä¸ªjsæ‰“åŒ…å·¥å…·ã€‚ç‚¹å‡»è¿™é‡Œ[fresher](./fresher)
+
+### Webpackå¼•å…¥HTMLæ–‡ä»¶
+Webpackä»¥JSä¸ºå…¥å£æ–‡ä»¶ï¼Œè¾“å‡ºå¯¹åº”çš„bundleï¼Œå¦‚æœæƒ³è¦å…³è”HTMLæ–‡ä»¶ï¼Œå¯ä»¥ç”¨[html-webpack-plugin](./html-plug/)æ’ä»¶
+
+### Webpackå¼•å…¥CSSæ–‡ä»¶
+Webpacké€šè¿‡requrie('...css')åœ¨Js bundle ä¸­å¼•å…¥CSSæ–‡ä»¶ï¼Œå¯¼è‡´CSSæ–‡æœ¬æ”¾å…¥Jsæ–‡ä»¶ä¸­ã€‚è¦æƒ³å°†CSSæ–‡ä»¶æŠ½å‡ºæ¥æ”¾è‡³HTMLä¸­ï¼Œå¯ä»¥ç”¨extract-text-webpack-plugin](./css-plug/)æ’ä»¶
+
+### Webpackä¸æ¨¡æ¿
+æœ¬Demoä¸»è¦ä½œäº†Webpackå¼•å…¥HTMLæ„å»ºæ¨¡æ¿(ejs)ã€Runtimeæ—¶çš„æ•°æ®æ¨¡æ¿(ejsã€underscoreã€art-template)çš„ç®€å•ç¤ºä¾‹[template](./template)
+
+### Webpackä¹‹loader
+å¦‚æœå¯¹Webpackä¸­çš„file-loaderã€url-loaderã€html-loaderä¸äº†è§£çš„å¯ä»¥ç‚¹å‡»è¿™é‡Œ[loaders](./loaders)
+
+### Webpackä¹‹es6
+æƒ³ç”¨Webpackçš„é¡¹ç›®ä¸­ç”¨es6è¯­æ³•ï¼Œå¯ä»¥ç‚¹å‡»è¿™é‡Œ[es6](./es6)

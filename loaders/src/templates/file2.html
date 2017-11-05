@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<link rel="stylesheet" href="./static/css/style.css" />
+<link rel="stylesheet" href="../../dist/static/style/page.css" />
 </head>
 <body>
     <div class="wrap">
@@ -37,18 +37,26 @@
                 <dt>配置文件</dt>
                 <dd>
                     <pre>
-module: {
-        loaders: [
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'file-loader?name=static/images/[hash].[ext]'
-            },
-            {
-                test: /\.html$/,
-                loader: 'html'
+rules: [
+      {
+        test: /\.(png|jpg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'static/images/[hash].[ext]'
             }
+          }
         ]
-    }</pre>
+        // loader: 'file-loader?name=static/images/[hash].[ext]'
+      },
+      {
+        test: /\.html$/,
+        use: [
+          { loader: 'html-loader' }
+        ]
+      }
+    ]</pre>
                 </dd>
             </dl>
         </section>
