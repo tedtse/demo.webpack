@@ -27,7 +27,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'art-template-home.html',
             template: './src/art-template/art-template-home.html',
-            inject: true,              // js≤Â»ÎŒª÷√,
+            inject: true,
             chunks: ['art-template-home']
         })
     ],

@@ -42,7 +42,7 @@ for (var page in pages) {
   var conf = {
     filename: page + '.html',
     template: pages[page],
-    inject: true,              // js≤Â»ÎŒª÷√,
+    inject: true,
     chunks: [page]
   };
   module.exports.plugins.push(new HtmlWebpackPlugin(conf));

@@ -1,12 +1,13 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     entry: {
-        page_a: './src/assets/js/page_a.js'
+        'page-a': './src/assets/js/page-a.js'
     },
     output: {
-        path: './dist',
-        publicPath: '/dist/',
+        path: path.resolve(__dirname, 'dist'),
+        // publicPath: '/dist/',
         filename: 'static/js/[name].js'
     },
     module: {
